@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
-degree_data = pd.read_excel('data/degrees-that-pay-back.xlsx')
+degree_data = pd.read_excel('degrees-that-pay-back.xlsx')
 
 
 def create_table(level):
-    data = pd.read_excel('data/cc_institution_details.xlsx')
+    data = pd.read_excel('cc_institution_details.xlsx')
     
 
     if (level == '2-year'):
