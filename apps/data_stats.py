@@ -1,9 +1,7 @@
 import streamlit as st
-import pandas as pd
 from data.create_data import create_table
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import re
 
 
 def app():
