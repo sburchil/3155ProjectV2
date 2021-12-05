@@ -28,12 +28,3 @@ def create_degreedf():
         columns=['Undergraduate Major', 'start_med_salary', 'mid_med_salary', 'percent_change', 'mid-10', 'mid-25', 'mid-75', 'mid-90'])
 
     return degree_df
-
-
-
-
-    hide_footer_style = """
-    <style>
-    .reportview-container .main footer {visibility: hidden;}    
-    """
-    st.markdown(hide_footer_style, unsafe_allow_html=True)
