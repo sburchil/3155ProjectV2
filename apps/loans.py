@@ -25,9 +25,3 @@ def app():
     totalLoan = interestPayed + loanAmount
     st.markdown("### Interest Paid: `$" + str(round(interestPayed, 2)) + "`")
     st.markdown("### Total Cost of Loan: `$" + str(round(totalLoan, 2)) + "`")
-
-    #Sources
-    st.markdown("### Sources")
-    st.markdown("""<a href="https://educationdata.org/average-student-loan-debt">Average Student Loans</a>""", unsafe_allow_html=True)
-    st.markdown("""<a href="https://educationdata.org/average-student-loan-interest-rate#:~:text=5.8%25%20is%20the%20average%20student%20loan%20interest%20rate%20among%20all,rates%20fell%20an%20average%2031.24%25.">Average Student Loan Interest Rates </a>""", unsafe_allow_html=True)
-    
