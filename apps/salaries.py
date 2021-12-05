@@ -29,7 +29,6 @@ def app():
     mid_75 = str(major_data['mid-75'].values)
     mid_90 = str(major_data['mid-90'].values)
 
-    print(undergrad_major)
     for character in '[\'\]':
         undergrad_major = undergrad_major.replace(character, '')
         start_salary = start_salary.replace(character, '')
@@ -56,47 +55,100 @@ def app():
     #                     yaxis_title='Percentages per percentile',
     #                     )
     # fig.update_yaxes(automargin=True)
+    # fig = go.Figure()
+    # fig2 = go.Figure()
+    # fig.add_trace(go.Scatter(name='10th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-10'], mode='lines+markers'))
+    # fig.add_trace(go.Scatter(name='25th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-25'], mode='lines+markers'))
+    # fig.add_trace(go.Scatter(name='75th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-75'], mode='lines+markers'))
+    # fig.add_trace(go.Scatter(name='90th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-90'], mode='lines+markers'))
+    # fig2.add_trace(go.Scatter(name='10th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-10'], mode='lines+markers'))
+    # fig2.add_trace(go.Scatter(name='25th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-25'], mode='lines+markers'))
+    # fig2.add_trace(go.Scatter(name='75th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-75'], mode='lines+markers'))
+    # fig2.add_trace(go.Scatter(name='90th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-90'], mode='lines+markers'))
+    chosen_majors = st.multiselect('Select Some Majors to Look at', df['Undergraduate Major'])
+    
+    chosen_majors.sort()
+    print(chosen_majors)
     fig = go.Figure()
-    fig2 = go.Figure()
-    fig.add_trace(go.Scatter(name='10th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-10'], mode='lines+markers'))
-    fig.add_trace(go.Scatter(name='25th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-25'], mode='lines+markers'))
-    fig.add_trace(go.Scatter(name='75th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-75'], mode='lines+markers'))
-    fig.add_trace(go.Scatter(name='90th Percentile', x=df.loc[:25, 'Undergraduate Major'], y=df.loc[:25, 'mid-90'], mode='lines+markers'))
-    fig2.add_trace(go.Scatter(name='10th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-10'], mode='lines+markers'))
-    fig2.add_trace(go.Scatter(name='25th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-25'], mode='lines+markers'))
-    fig2.add_trace(go.Scatter(name='75th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-75'], mode='lines+markers'))
-    fig2.add_trace(go.Scatter(name='90th Percentile', x=df.loc[26:51, 'Undergraduate Major'], y=df.loc[26:51, 'mid-90'], mode='lines+markers'))
+    for k in chosen_majors:
+        print(k)
+        major = df[df['Undergraduate Major'] == k]
+        print(major)
+        fig.add_trace(go.Scatter(
+            x=major['Undergraduate Major'], 
+            y=major['mid-10'], 
+            mode='markers', 
+            connectgaps = True,       
+            legendgroup='Mid Career 10th Percentile',
+            name='Mid Career 10th Percentile',
+            marker=dict(
+            color='blue',
+            size=15,
+            line=dict(
+                color='DarkSlateGray',
+                width=2
+            )
+        )))
+        fig.add_trace(go.Scatter(
+            x=major['Undergraduate Major'], 
+            y=major['mid-25'], 
+            mode='markers', 
+            connectgaps = True,
+            legendgroup='Mid Career 25th Percentile',
+            name='Mid Career 25th Percentile',
+            marker=dict(
+            color='yellow',
+            size=15,
+            line=dict(
+                color='DarkSlateGray',
+                width=2
+            )
+        )))
+        fig.add_trace(go.Scatter(
+            x=major['Undergraduate Major'],
+            y=major['mid-75'], 
+            mode='markers', 
+            connectgaps = True,
+            legendgroup='Mid Career 75th Percentile',
+            name='Mid Career 75th Percentile',
+            marker=dict(
+            color='red',
+            size=15,
+            line=dict(
+                color='DarkSlateGray',
+                width=2
+            )
+        )))
+        fig.add_trace(go.Scatter(
+            x=major['Undergraduate Major'], 
+            y=major['mid-90'], mode='markers', 
+            connectgaps = True,
+            legendgroup='Mid Career 90th Percentile',
+            name='Mid Career 90th Percentile',
+            marker=dict(
+            color='green',
+            size=15,
+            line=dict(
+                color='DarkSlateGray',
+                width=2
+            )
+        )))
 
-    fig2.update_layout(
-        autosize=False,
-        width=800,
-        height=500,
-        xaxis_tickangle=50,
-        xaxis_title='Majors',
-        yaxis_title='Salary Amount Per Percentile',
-        margin=dict(
-        l=50,
-        r=50,
-        b=100,
-        t=100,
-        pad=4)
+        fig.update_layout(
+            xaxis_tickangle=25,
+            xaxis_title='Majors',
+            yaxis_title='Salary Amount Per Percentile',
+            showlegend = False,
+            autosize=False,
+            width=800,
+            height=500,
+        )
 
-    )
-    fig.update_layout(
-        autosize=False,
-        width=800,
-        height=500,
-        xaxis_tickangle=50,
-        xaxis_title='Majors',
-        yaxis_title='Salary Amount Per Percentile',
-        margin=dict(
-        l=50,
-        r=50,
-        b=100,
-        t=100,
-        pad=4)
 
-    )
 
     st.plotly_chart(fig)
-    st.plotly_chart(fig2)
+    st.markdown("🟦 Mid Career 10th Percentile")
+    st.markdown("🟨 Mid Career 25th Percentile")
+    st.write("🟥 Mid Career 75th Percentile")
+    st.write("🟩 Mid Career 90th Percentile")       
+
