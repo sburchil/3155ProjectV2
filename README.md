@@ -27,3 +27,9 @@ $ pip install -r requirements.txt
 streamlit run ./app.py
 ```
 
+6. In case of Error
+```
+-Ctrl^C in terminal to terminate Streamlit
+-Close Streamlit window
+-Restart Streamlit through terminal
+```
