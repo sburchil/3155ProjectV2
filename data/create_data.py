@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+
 degree_data = pd.read_excel('data/degrees-that-pay-back.xlsx')
 
 

@@ -9,7 +9,6 @@ def app():
 
     st.markdown("### Sample Data")
 
-    # 
     level = st.selectbox('Do you wish to view 2 year or 4 year institutions?', [
                           '2-year', '4-year'])
     df = create_table(level)

@@ -1,5 +1,4 @@
 import streamlit as st
-import openpyxl as opx
 from data.create_data import create_table, create_degreedf
 
 level = ''
@@ -75,4 +74,8 @@ def app():
         with col4:
             st.markdown("""<a href="https://www.kaggle.com/cdelany7/exploration-of-college-salaries-by-major/data">Average Student Loan Interest Rates </a>""", unsafe_allow_html=True)     
                
-        
+    st.header("Clone the multi-page source repository:")           
+    st.code("""
+$ git clone git@github.com:upraneelnihar/streamlit-multiapps
+$ cd streamlit-multiapps
+""", language="markdown")

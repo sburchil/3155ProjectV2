@@ -1,9 +1,7 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 from data.create_data import create_degreedf
 import plotly.graph_objects as go
-import re
+
 
 
 
