@@ -5,7 +5,7 @@ from data.create_data import create_table, create_degreedf
 level = ''
 
 def app():
-    st.markdown("<h1 style='text-align: center;'>About</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Home</h1>", unsafe_allow_html=True)
 
     st.markdown("""
     <section style='text-align: center;'>
@@ -32,7 +32,7 @@ def app():
 
     #Sources
     st.markdown("<h3 style='text-align: center;'> Sources </h3>", unsafe_allow_html=True)
-   # st.markdown("""<a href="https://educationdata.org/average-student-loan-debt">Average Student Loans</a>""", unsafe_allow_html=True)
+    #st.markdown("""<a href="https://educationdata.org/average-student-loan-debt">Average Student Loans</a>""", unsafe_allow_html=True)
     
     st.markdown("""
     <div style='text-align: center';>
