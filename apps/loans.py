@@ -16,7 +16,7 @@ def app():
     st.write("This calculator is not financial advice and should not be used for calculating your loan costs. Ask your lender for verified information.")
 
     #Loan Cost Calculator
-    loanAmount = st.number_input('Loan Amount: $', min_value=0, value=30000, step=5000)
+    loanAmount = st.number_input('Loan Amount: $', min_value=0, max_value=300000, value=30000, step=5000)
     interest = st.number_input('Interest in %:', min_value=2.0, max_value=10.0, value=5.8,step=0.2, help='This is the Annual Percent Interest on the loan. Should be between 1-10%')
     payoffTime = st.slider(label='Time to Payoff (Yrs):', min_value=0, max_value=30, value=18, help='This is the amount of time in years it will take for you to pay off the loan.')
 
