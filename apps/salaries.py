@@ -3,8 +3,6 @@ from data.create_data import create_degreedf
 import plotly.graph_objects as go
 
 
-
-
 #We gotta make sure to put the data in the data folder and then import it correctly.
 
 def app():

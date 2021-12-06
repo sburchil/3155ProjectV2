@@ -47,3 +47,4 @@ class MultiApp:
             format_func=lambda app: app['title'])
 
         app['function']()
+        

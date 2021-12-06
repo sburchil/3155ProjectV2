@@ -18,7 +18,7 @@ def app():
     loanAmount = st.number_input('Loan Amount: $', min_value=0, max_value=300000, value=30000, step=5000)
     interest = st.number_input('Interest in %:', min_value=2.0, max_value=10.0, value=5.8,step=0.2, help='This is the Annual Percent Interest on the loan. Should be between 1-10%')
     payoffTime = st.slider(label='Time to Payoff (Yrs):', min_value=0, max_value=30, value=18, help='This is the amount of time in years it will take for you to pay off the loan.')
-
+    
     #Calculations
     interestPayed = (loanAmount * (interest / 100)) * payoffTime    #principle * rate * time
     totalLoan = interestPayed + loanAmount
