@@ -2,7 +2,7 @@
 
 1. Clone the repository:
 ```
-$ git clone git@github.com:sburchil/3155ProjectV2
+$ git clone https://github.com/sburchil/3155ProjectV2
 ```
 2. Ensure that python 3.8.6 is installed
 ```
