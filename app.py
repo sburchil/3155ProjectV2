@@ -1,7 +1,7 @@
 import streamlit as st
 st.set_page_config(initial_sidebar_state="collapsed", page_title='UniSight', page_icon=':goat:')
 from multiapp import MultiApp
-from apps import data_stats, about, loans, salaries # import your app modules here
+from apps import data_stats, home, loans, salaries # import your app modules here
 
 # hide_footer_style = """
 #     <style>
@@ -12,7 +12,7 @@ from apps import data_stats, about, loans, salaries # import your app modules he
 app = MultiApp()
 
 # Add all your application here
-app.add_app("Home", about.app)
+app.add_app("Home", home.app)
 app.add_app("Data Stats", data_stats.app)
 app.add_app("Loans", loans.app)
 app.add_app("Salaries", salaries.app)
