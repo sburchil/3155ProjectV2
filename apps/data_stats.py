@@ -19,51 +19,55 @@ def app():
     school_choice2 = st.selectbox('Select a second school to compare', df['chronname'])
     school_data2 = df[df['chronname']==school_choice2]
 
- 
+    col1, col2 = st.columns([1, 1])
+
+
     fig = go.Figure().set_subplots(1, 2,
                     shared_yaxes=True,
                     )
+
     fig.add_trace(go.Bar(
             x=school_data['chronname'],
-            y=school_data['grad_100_value']), 
+            y=school_data['grad_100_value'],
             marker=dict(
-                color='blue',
-            ),
+                color='blue'
+            )),
             row=1, 
             col=1,  
             )
     fig.add_trace(go.Bar(
             x=school_data['chronname'], 
-            y=school_data['grad_150_value']), 
+            y=school_data['grad_150_value'],
             marker=dict(
-                color='yellow',
-            ),
+                color='yellow'
+            )), 
             row=1, 
             col=1,  
             )
+
     fig.add_trace(go.Bar(
             x=school_data2['chronname'], 
-            y=school_data2['grad_100_value']), 
+            y=school_data2['grad_100_value'],
             marker=dict(
-                color='blue',
-            ),
+                color='blue'
+            )), 
             row=1, 
             col=2,
     )
     fig.add_trace(go.Bar(
             x=school_data2['chronname'], 
-            y=school_data2['grad_150_value']), 
+            y=school_data2['grad_150_value'],
             marker=dict(
-                color='yellow',
-            ),
+                color='yellow'
+            )), 
             row=1, 
             col=2,
             )
     fig.update_layout(
         barmode='group',
         yaxis_title='Percent Graduated',
-        
         )
+
     fig.update_traces(showlegend=False)
     school_count = str(school_data['student_count'].values)
     school_count2 = str(school_data2['student_count'].values)
