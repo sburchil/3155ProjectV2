@@ -33,3 +33,8 @@ streamlit run ./app.py
 -Close Streamlit window
 -Restart Streamlit through terminal
 ```
+
+7. (Extra) View it Online 
+```
+https://share.streamlit.io/sburchil/3155projectv2/main/app.py
+```
