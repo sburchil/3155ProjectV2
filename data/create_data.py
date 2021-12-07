@@ -5,7 +5,6 @@ degree_data = pd.read_excel('data/degrees-that-pay-back.xlsx')
 
 def create_table(level):
     data = pd.read_excel('data/cc_institution_details.xlsx')
-    
 
     if (level == '2-year'):
         df = pd.DataFrame(data, 
