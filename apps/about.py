@@ -19,7 +19,7 @@ def app():
         <div style='text-align: center;'>
         <p>Thomas Cowie -- Co Project Manager</p>
         <p>Casey Oates -- Co Project Managers</p>
-        <p>Eric Betties -- Resource Mangers</p>
+        <p>Eric Betties -- Resource Manager</p>
         <p>Symon Burchill -- Business Analyst</p>
         </div>
     """, unsafe_allow_html=True)
