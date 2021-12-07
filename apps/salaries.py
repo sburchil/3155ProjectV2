@@ -43,6 +43,7 @@ def app():
     st.write("Average starting salary for " + undergrad_major + " is approx.: `$" + start_salary + "`")
     st.write("Average Mid-Career salary for  " +  undergrad_major + " is approx.: `$" + mid_salary + "`")
     st.write("Percentage change from starting salary to mid-career for " + undergrad_major + " is approx.: `" + percent_change + "%" + "`")
+    
     ### Displays two graphs of all Majors percentile stats.
     # fig = go.Figure(go.Pie(labels=['Mid-Career 10th percentile', 'Mid-Career 25th percentile', 'Mid-Career 75th percentile', 'Mid-Career 90th percentile'],
     #                          values=[mid_10, mid_25, mid_75, mid_90],
@@ -116,6 +117,7 @@ def app():
         fig.update_xaxes(
             automargin=True
         )
+    
     ### Changes graph from bar chart to line chart
     # for k in chosen_majors:
     #     print(k)
