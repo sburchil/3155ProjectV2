@@ -20,7 +20,7 @@ def app():
     school_data2 = df[df['chronname']==school_choice2]
 
     col1, col2 = st.columns([1, 1])
-
+        
 
     fig = go.Figure().set_subplots(1, 2,
                     shared_yaxes=True,
@@ -78,8 +78,11 @@ def app():
         school_count2 = school_count2.replace(character, '')
         school_name = school_name.replace(character, '')
         school_name2 = school_name2.replace(character, '')
-    st.write("The left graph is based on " + school_name  + "'s current student count: `" + school_count + "` enrolled at the time of sampling.")
-    st.write("The right graph is based on " + school_name2  + "'s current student count: `" + school_count2 + "` enrolled at the time of sampling.")
+
+    with col1:
+        st.write("This graph is based on " + school_name  + "'s current student count: `" + school_count + "` enrolled at the time of sampling.")
+    with col2:
+        st.write("This graph is based on " + school_name2  + "'s current student count: `" + school_count2 + "` enrolled at the time of sampling.")
     st.plotly_chart(fig)
     st.markdown("<div style='text-align: center;'>🟦 100% time taken to graduate</div>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: center;'>🟨 150% time taken to graduate</div>", unsafe_allow_html=True)
