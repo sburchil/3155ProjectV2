@@ -18,7 +18,7 @@ def app():
         <div style='text-align: center;'>
         <h3 style='text-align: center;'> Contributors </h3>
         <p>Thomas Cowie -- Co Project Manager</p>
-        <p>Casey Oates -- Co Project Managers</p>
+        <p>Casey Oates -- Co Project Manager</p>
         <p>Eric Betties -- Resource Manager</p>
         <p>Symon Burchill -- Business Analyst</p>
         </div>
