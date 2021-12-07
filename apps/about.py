@@ -1,7 +1,4 @@
 import streamlit as st
-from data.create_data import create_table, create_degreedf
-
-level = ''
 
 def app():
     st.markdown("<h1 style='text-align: center;'>Home</h1>", unsafe_allow_html=True)

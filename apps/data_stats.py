@@ -20,7 +20,7 @@ def app():
     school_data2 = df[df['chronname']==school_choice2]
 
     col1, col2 = st.columns([1, 1])
-        
+    
 
     fig = go.Figure().set_subplots(1, 2,
                     shared_yaxes=True,
