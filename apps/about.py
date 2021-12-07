@@ -56,7 +56,7 @@ def app():
                 st.success('Download Successful!')
                 st.balloons()
         with col2:
-            st.markdown("""<a href="https://www.kaggle.com/cdelany7/exploration-of-college-salaries-by-major/data">Average Student Loan Interest Rates </a>""", unsafe_allow_html=True)
+            st.markdown("""<a target="blank" href="https://data.world/databeats/college-completion">Average Student Loan Interest Rates </a>""", unsafe_allow_html=True)
 
     st.header("Data Set Used for Salary by Major")
 
