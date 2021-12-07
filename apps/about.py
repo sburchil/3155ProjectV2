@@ -4,7 +4,7 @@ from data.create_data import create_table, create_degreedf
 level = ''
 
 def app():
-    st.markdown("<h1 style='text-align: center;'>Home</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Home</h1>", unsafe_allow_html=True)
 
     st.markdown("""
     <section>
