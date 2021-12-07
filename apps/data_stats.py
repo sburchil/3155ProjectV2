@@ -28,33 +28,25 @@ def app():
             y=school_data['grad_100_value']), 
             row=1, 
             col=1,  
-            marker=dict(
-                color='blue',
-            ))
+            color='blue')
     fig.add_trace(go.Bar(
             x=school_data['chronname'], 
             y=school_data['grad_150_value']), 
             row=1, 
             col=1,  
-            marker=dict(
-                color='yellow',
-            ))
+            color='yellow')
     fig.add_trace(go.Bar(
             x=school_data2['chronname'], 
             y=school_data2['grad_100_value']), 
             row=1, 
             col=2,
-            marker=dict(
-                color='blue',
-            ))
+            color='blue')
     fig.add_trace(go.Bar(
             x=school_data2['chronname'], 
             y=school_data2['grad_150_value']), 
             row=1, 
             col=2,
-            marker=dict(
-                color='yellow',
-            ))
+            color='yellow')
     fig.update_layout(
         barmode='group',
         yaxis_title='Percent Graduated',
