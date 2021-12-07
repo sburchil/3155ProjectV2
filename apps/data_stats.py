@@ -88,12 +88,13 @@ def app():
     with col2:
         st.write("This graph is based on " + school_name2 + "'s current student count: `" +
                  school_count2 + "` enrolled at the time of sampling.")
+
     st.plotly_chart(fig)
+
     st.markdown("<div style='text-align: center;'>🟦 100% time taken to graduate</div>",
                 unsafe_allow_html=True)
     st.markdown("<div style='text-align: center;'>🟨 150% time taken to graduate</div>",
                 unsafe_allow_html=True)
-
     st.markdown("<h1 stlye='text-align: center;'> Description of Graph Above </h1>",
                 unsafe_allow_html=True)
     st.markdown("""<div style='text-align: center;'>The above Graph represents the time students from each college take to finish their major. The bar to the very left
