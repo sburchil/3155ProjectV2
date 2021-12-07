@@ -30,7 +30,7 @@ def app():
     # st.write("Symon Burchill -- Business Analyst")
 
     #Sources
-    st.markdown("<h3 style='text-align: center;'> Sources </h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'> Sources For The Loan Calculator</h3>", unsafe_allow_html=True)
     #st.markdown("""<a href="https://educationdata.org/average-student-loan-debt">Average Student Loans</a>""", unsafe_allow_html=True)
     
     st.markdown("""
