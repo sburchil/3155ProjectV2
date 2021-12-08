@@ -75,4 +75,4 @@ def app():
     st.code("""
 $ git clone git@github.com:upraneelnihar/streamlit-multiapps
 $ cd streamlit-multiapps
-""", language="markdown")
+""", language='bash')
